@@ -4,8 +4,9 @@ import cookieParser from "cookie-parser";
 import config from "config";
 import cors from "cors";
 import routes from "../routes";
-import pool from "./connectionDB";
+import pool from "./connectWithMySQL";
 import log from "./logger";
+import mongo_connection from "./connectWithMongoDb";
 const createServer = () => {
   const app = express();
   dotenv.config();
@@ -20,9 +21,12 @@ const createServer = () => {
     if (err) {
       log.error("Error connecting to the database:", err);
     } else {
-      log.info(`Connected to the database at http://localhost:${config.get("port")}`);
+      log.info(
+        `Connected to the database at http://localhost:${config.get("port")}`
+      );
     }
   });
+  mongo_connection();
   routes(app);
   return app;
 };

@@ -25,6 +25,7 @@
     "pino-pretty": "^10.2.3",
     "prom-client": "^15.0.0",
     "response-time": "^2.3.2",
+    "sequelize": "^6.33.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {
@@ -42,6 +43,7 @@
     "@types/node": "^20.8.7",
     "@types/pino": "^7.0.5",
     "@types/response-time": "^2.3.7",
+    "@types/sequelize": "^4.28.17",
     "@types/supertest": "^2.0.15",
     "@types/swagger-jsdoc": "^6.0.2",
     "dayjs": "^1.11.10",
