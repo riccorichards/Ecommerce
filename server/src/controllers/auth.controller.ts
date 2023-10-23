@@ -14,6 +14,7 @@ export const registerHandler = async (
 ) => {
   try {
     const user = await register(req.body);
+    if (!user) return res.status(400).json({ msg: "Bad request!" });
     return res.status(201).json(user);
   } catch (error: any) {
     log.error(error.message);

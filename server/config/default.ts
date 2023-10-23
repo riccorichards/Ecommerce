@@ -8,4 +8,6 @@ export default {
   saltWorkFactor: "13",
   rsaPriviteKey: process.env["RSA_PRIVATE_KEY"],
   rsaPublicKey: process.env["RSA_PUBLIC_KEY"],
+  accessTokenTtl: process.env["ACCESS_TOKEN_TIME_TO_LIVE"],
+  accessRefreshTtl: process.env["REFRESH_TOKEN_TIME_TO_LIVE"],
 };

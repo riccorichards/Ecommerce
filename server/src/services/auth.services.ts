@@ -7,6 +7,7 @@ import log from "../utils/logger";
 export const register = async (input: UserInput) => {
   try {
     const user = await UserModel.create(input);
+    if (!user) return false;
     return omit(user.toJSON(), "password");
   } catch (error: any) {
     log.error(error.message);
@@ -22,7 +23,7 @@ export const login = async ({
   password: string;
 }) => {
   try {
-    const user = await UserModel.findOne({ email: email }).exec();
+    const user = await UserModel.findOne({ email: email });
 
     if (!user) return false;
 
@@ -36,4 +37,3 @@ export const login = async ({
     return false;
   }
 };
-

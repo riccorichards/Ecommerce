@@ -76,8 +76,10 @@ UserSchema.methods.comparePass = async function (
   incomingPassword: string
 ): Promise<boolean> {
   const user = this as UserDocument;
+  const userPass = user.password;
   const validPassword = await bcrypt
-    .compare(incomingPassword, user.password)
+    .compare(incomingPassword, userPass)
+    .then(() => true)
     .catch(() => false);
   return validPassword;
 };
