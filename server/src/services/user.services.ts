@@ -1,4 +1,4 @@
-import UserModel from "../models/user.models";
+import UserModel from "../models/user.model";
 import { UserDocument } from "../utils/types/types.customer";
 import log from "../utils/logger";
 import { FilterQuery, UpdateQuery } from "mongoose";

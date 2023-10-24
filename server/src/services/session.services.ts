@@ -1,5 +1,5 @@
 import { FilterQuery, UpdateQuery } from "mongoose";
-import SessionModel from "../models/session.models";
+import SessionModel from "../models/session.model";
 import log from "../utils/logger";
 import SessionDocument from "../utils/types/types.session";
 
@@ -13,7 +13,7 @@ export const createSession = async (userId: string, userAgent: string) => {
 };
 
 export const findSessions = async (query: FilterQuery<SessionDocument>) => {
-  return SessionModel.find(query).lean();
+  return await SessionModel.find(query).lean();
 };
 
 export const deleteSession = async (

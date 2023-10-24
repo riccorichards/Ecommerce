@@ -8,7 +8,7 @@ import { signWihtJWT, verifyJWT } from "../utils/jwt.utils";
 import log from "../utils/logger";
 import { CookieOptions, Request, Response } from "express";
 import config from "config";
-import SessionModel from "../models/session.models";
+import SessionModel from "../models/session.model";
 import { get } from "lodash";
 import { findUser } from "../services/user.services";
 

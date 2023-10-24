@@ -13,3 +13,4 @@ const SessionModel = mongoose.model<SessionDocument>(
 );
 
 export default SessionModel;
+

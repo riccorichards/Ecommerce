@@ -1,5 +1,5 @@
 import { omit } from "lodash";
-import UserModel from "../models/user.models";
+import UserModel from "../models/user.model";
 import { UserInput } from "../utils/types/types.customer";
 import log from "../utils/logger";
 

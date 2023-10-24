@@ -14,3 +14,5 @@ const sampleObject = {
 const objectSize = Buffer.byteLength(JSON.stringify(sampleObject));
 
 console.log(`Size of the sample object: ${objectSize} bytes`); // 339 bytes
+
+//mocka teting with terminal

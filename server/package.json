@@ -24,6 +24,7 @@
     "pino": "^8.16.0",
     "pino-pretty": "^10.2.3",
     "prom-client": "^15.0.0",
+    "redis": "^4.6.10",
     "response-time": "^2.3.2",
     "sequelize": "^6.33.0",
     "zod": "^3.22.4"
