@@ -21,7 +21,6 @@ export const registerHandler = async (
     return res.status(409).json({ msg: error.message });
   }
 };
-
 export const currentUser = async (req: Request, res: Response) => {
   try {
     return res.json(res.locals.user);
@@ -30,7 +29,6 @@ export const currentUser = async (req: Request, res: Response) => {
     return res.status(400).json({ msg: error.message });
   }
 };
-
 export const getSpecificUserHandler = async (
   req: Request<ReadUserSchemaType["params"]>,
   res: Response
@@ -43,7 +41,6 @@ export const getSpecificUserHandler = async (
     return res.status(404).json({ msg: error.message });
   }
 };
-
 export const getAllUsersHandler = async (req: Request, res: Response) => {
   try {
     const users = findAllUsers();
@@ -53,7 +50,6 @@ export const getAllUsersHandler = async (req: Request, res: Response) => {
     return res.status(400).json({ msg: error.message });
   }
 };
-
 export const updateUserHandler = async (
   req: Request<UpdateUserSchemaType["params"]>,
   res: Response

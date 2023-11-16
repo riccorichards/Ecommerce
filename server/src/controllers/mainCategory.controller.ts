@@ -15,6 +15,7 @@ import {
 } from "../schemas/mainCategory.schema";
 import MainCategoryModal from "../models/mainCaterogy.model";
 
+
 export const getAllMainCatHandler = async (req: Request, res: Response) => {
   try {
     const allMainCats = await getAllCategories();
@@ -24,7 +25,6 @@ export const getAllMainCatHandler = async (req: Request, res: Response) => {
     throw error;
   }
 };
-
 export const getSpecificMainCatHandler = async (
   req: Request<ReadMainCatType["params"]>,
   res: Response
@@ -42,7 +42,6 @@ export const getSpecificMainCatHandler = async (
     throw error;
   }
 };
-
 export const createMainCatHandler = async (
   req: Request<{}, {}, CreateMainCatType["body"]>,
   res: Response
@@ -64,7 +63,6 @@ export const createMainCatHandler = async (
     throw error;
   }
 };
-
 export const updateMainCatHandler = async (
   req: Request<UpdateMainCatType["params"]>,
   res: Response
@@ -85,7 +83,6 @@ export const updateMainCatHandler = async (
     throw error;
   }
 };
-
 export const deleteMainCatHandler = async (
   req: Request<DeleteMainCatType["params"]>,
   res: Response
