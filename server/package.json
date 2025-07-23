@@ -26,7 +26,7 @@
     "pino-pretty": "^10.2.3",
     "prom-client": "^15.0.0",
     "redis": "^4.6.10",
-    "response-time": "^2.3.2",
+    "response-time": "^2.3.4",
     "sequelize": "^6.33.0",
     "uuid": "^9.0.1",
     "zod": "^3.22.4"
